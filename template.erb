@@ -1,0 +1,19 @@
+# <%= @title %>
+
+<%= put_description() %>
+
+## Fruits
+
+<% @fruits.each do |fruit| %>
+  - <%= fruit %>
+<% end %>
+
+## Greeting
+
+<% if @current_hour < 9 %>
+  おはよう！
+<% elsif @current_hour < 17 %>
+  こんにちは！
+<% else %>
+  こんばんは！
+<% end %>

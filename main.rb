@@ -16,7 +16,9 @@ class Main
     template_file = File.read('template.erb')
     template = ERB.new(template_file)
     output = template.result(binding)
-    puts output
+    File.open('./dist/index.html', 'w') do |file|
+      file.puts output
+    end
   end
 
 end

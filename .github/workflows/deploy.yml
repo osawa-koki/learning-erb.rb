@@ -29,10 +29,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ env.ruby-version }}
-      - name: Change permissions
-        run: chmod +x ./main.rb
       - name: Run
-        run: ./main.rb
+        run: ruby ./main.rb
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
